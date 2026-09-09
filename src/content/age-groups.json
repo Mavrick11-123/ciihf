@@ -1,0 +1,58 @@
+[
+  {
+    "id": "learn-to-skate",
+    "name": "Learn to Skate",
+    "ages": "Ages 4+",
+    "summary": "Fun drills and games that build skating balance and confidence. Many players start here before Intro to Hockey.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "intro",
+    "name": "Intro to Hockey",
+    "ages": "Ages 4+",
+    "summary": "Skating, passing, and shooting fundamentals for new players. Pathways into Minor Hockey.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "minor",
+    "name": "Minor Hockey",
+    "ages": "Developmental",
+    "summary": "One practice and one game per week focused on skill development and game sense before moving into age-group leagues.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "10u",
+    "name": "10U",
+    "ages": "10 and under",
+    "summary": "Structured practices and games 2–3 times per week. Travel opportunities at ECHO, TORHS, and NARCh when teams are entered.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "13u",
+    "name": "13U",
+    "ages": "13 and under",
+    "summary": "Competitive youth hockey with advanced skill work. Players often continue into adult leagues or ice pathways abroad.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "16u",
+    "name": "16U",
+    "ages": "16 and under",
+    "summary": "Older youth competitive group. CIIHF is fielding a 2026 16U travel team.",
+    "schedule": "To be confirmed for 2026–27"
+  },
+  {
+    "id": "mens",
+    "name": "Men's Roller Hockey",
+    "ages": "Adult",
+    "summary": "Tuesday-night league, typically four teams, competing for the King's Cherry Cup.",
+    "schedule": "Tuesdays at King's Sports Centre (confirm season dates)"
+  },
+  {
+    "id": "drop-in",
+    "name": "Sunday Drop-In",
+    "ages": "Adult / open",
+    "summary": "Casual drop-in hockey almost year-round on Sundays.",
+    "schedule": "Sundays (confirm with rink)"
+  }
+]

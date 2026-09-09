@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import site from '../content/site.json';
+
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.location.mapQuery)}&output=embed`;
+---
+
+<Layout
+  title="Contact"
+  description="Location and contact details for the Cayman Islands Inline Hockey Federation at King's Sports Centre."
+>
+  <PageHero
+    eyebrow="Contact"
+    title="Find us on Crewe Road"
+    lead="Home rink is King's Sports Centre in George Town. Use federation contacts for CIIHF matters; rink contacts for facility hours and bookings."
+  />
+
+  <section id="location" class="mx-auto max-w-6xl scroll-mt-24 px-4 py-14 md:px-6">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <div>
+        <h2 class="text-4xl text-navy">Location</h2>
+        <p class="mt-4 text-lg font-semibold text-ink">{site.location.venue}</p>
+        <p class="text-ink/80">{site.location.address}</p>
+        <p class="mt-4 text-sm text-ink/60">{site.location.note}</p>
+        <a
+          class="mt-6 inline-block text-sm font-semibold text-blue hover:text-red"
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.location.mapQuery)}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open in Google Maps →
+        </a>
+      </div>
+      <div class="min-h-72 overflow-hidden border border-sand bg-sand">
+        <iframe
+          title="Map of King's Sports Centre"
+          src={mapSrc}
+          class="h-full min-h-72 w-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="scroll-mt-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+      <h2 class="text-4xl text-navy">Contact details</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="border border-sand bg-mist p-6">
+          <p class="font-display text-2xl text-navy">Federation</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>
+              Email:
+              <a class="font-semibold text-blue hover:underline" href={`mailto:${site.contacts.federationEmail}`}>
+                {site.contacts.federationEmail}
+              </a>
+            </li>
+            <li>
+              Phone:
+              <a class="font-semibold text-blue hover:underline" href={`tel:${site.contacts.federationPhone.replace(/\s/g, '')}`}>
+                {site.contacts.federationPhone}
+              </a>
+            </li>
+            <li>
+              Instagram:
+              <a class="font-semibold text-blue hover:underline" href={site.social.instagram} target="_blank" rel="noreferrer">
+                @cayman.hockey
+              </a>
+            </li>
+            <li>
+              Facebook:
+              <a class="font-semibold text-blue hover:underline" href={site.social.facebook} target="_blank" rel="noreferrer">
+                Cayman Inline Hockey
+              </a>
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-ink/50">
+            Numbers and email from public registry / social listings until CIIHF supplies preferred public contacts.
+          </p>
+        </div>
+        <div class="border border-sand bg-mist p-6">
+          <p class="font-display text-2xl text-navy">King's Sports Centre</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>
+              Phone:
+              <a class="font-semibold text-blue hover:underline" href={`tel:${site.contacts.rinkPhone.replace(/\s/g, '')}`}>
+                {site.contacts.rinkPhone}
+              </a>
+            </li>
+            <li>
+              Email:
+              <a class="font-semibold text-blue hover:underline" href={`mailto:${site.contacts.rinkEmail}`}>
+                {site.contacts.rinkEmail}
+              </a>
+            </li>
+            <li>
+              Web:
+              <a class="font-semibold text-blue hover:underline" href={site.contacts.rinkUrl} target="_blank" rel="noreferrer">
+                kingssportscentre.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form
+        class="mt-10 max-w-xl space-y-4 border border-sand bg-mist p-6"
+        action="mailto:ciinlinehockey@gmail.com"
+        method="get"
+        enctype="text/plain"
+      >
+        <input type="hidden" name="subject" value="CIIHF website message" />
+        <p class="font-display text-2xl text-navy">Send a message</p>
+        <p class="text-xs text-ink/50">Opens your email app addressed to ciinlinehockey@gmail.com.</p>
+        <label class="block text-sm">
+          <span class="font-medium">Name</span>
+          <input class="mt-1 w-full border border-sand bg-white px-3 py-2" type="text" name="name" required />
+        </label>
+        <label class="block text-sm">
+          <span class="font-medium">Your email</span>
+          <input class="mt-1 w-full border border-sand bg-white px-3 py-2" type="email" name="email" required />
+        </label>
+        <label class="block text-sm">
+          <span class="font-medium">Message</span>
+          <textarea class="mt-1 w-full border border-sand bg-white px-3 py-2" name="body" rows="4" required></textarea>
+        </label>
+        <button
+          type="submit"
+          class="rounded bg-red px-5 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-red-hot"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>

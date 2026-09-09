@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import site from '../content/site.json';
+import board from '../content/board.json';
+import tournaments from '../content/tournaments.json';
+---
+
+<Layout
+  title="About CIIHF"
+  description="History, governance, on-island programs, and off-island tournaments for the Cayman Islands Inline Hockey Federation."
+>
+  <PageHero
+    eyebrow="About CIIHF"
+    title="National federation for inline hockey"
+    lead="CIIHF develops players on Grand Cayman and represents the Cayman Islands in travel competition. Home rink: King's Sports Centre."
+  >
+    <nav class="mt-8 flex flex-wrap gap-4 text-sm text-sand/90" aria-label="On this page">
+      <a class="underline-offset-4 hover:underline" href="#history">History</a>
+      <a class="underline-offset-4 hover:underline" href="#governance">Governance</a>
+      <a class="underline-offset-4 hover:underline" href="#on-island">On island</a>
+      <a class="underline-offset-4 hover:underline" href="#off-island">Off island</a>
+    </nav>
+  </PageHero>
+
+  <section class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+    <div class="max-w-3xl">
+      <h2 class="text-4xl text-navy">Who we are</h2>
+      <p class="mt-4 text-ink/80">
+        The Cayman Islands Inline Hockey Federation Ltd. is the registered sporting organisation for inline (roller)
+        hockey in the Cayman Islands. We are listed with the Department of Sports and affiliated internationally through
+        the Cayman Islands Federation entry with World Skate (affiliation ratified in 2017).
+      </p>
+      <p class="mt-4 text-ink/80">
+        On-island games and practices run at <strong>{site.location.venue}</strong>. CIIHF partners with the rink for
+        programming — we do not own the facility. Field hockey
+        (<a class="text-blue hover:underline" href="https://caymanhockey.com/" target="_blank" rel="noreferrer">caymanhockey.com</a>)
+        and ball hockey (Cayman Islands Ball Hockey Association / ISBHF pathway) are separate sports and organisations.
+      </p>
+    </div>
+  </section>
+
+  <section id="history" class="scroll-mt-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+      <h2 class="text-4xl text-navy">History</h2>
+      <ol class="mt-8 space-y-6 border-l-2 border-red/40 pl-6">
+        <li>
+          <p class="text-sm font-semibold text-red">2002</p>
+          <p class="text-ink/80">King's Sports Centre opens with a multipurpose rink that becomes Cayman's home for roller hockey.</p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">By 2009</p>
+          <p class="text-ink/80">
+            Youth roller leagues are established (including the WestTel Youth Roller Hockey League era), with age bands
+            such as Tykes 6U, Atoms 8U, Mites 10U, and Squirts 13U — older labels still remembered in local coverage.
+          </p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">Early 2010s</p>
+          <p class="text-ink/80">
+            Men's Tuesday league battles for the King's Cherry Cup. Sponsored team names become part of the island's rink culture.
+          </p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">2013–2014</p>
+          <p class="text-ink/80">
+            Youth program growth under Evan Ellbogen; Cayman teams medal at NARCh Regionals and earn Atom/Mite silvers at
+            the Finals. Josh Small among tournament scoring leaders.
+          </p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">Mid 2010s onward</p>
+          <p class="text-ink/80">
+            Dennis Passchier leads travel teams and rink programming; NARCh clinic hosted at King's. Regular TORHS travel
+            appears in federation Instagram highlights.
+          </p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">2017</p>
+          <p class="text-ink/80">Cayman Islands Federation affiliation with World Skate / FIRS ratified in Nanjing.</p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">2025</p>
+          <p class="text-ink/80">Cayman 12U wins ECHO Youth Finals 12U Tier 2; 10U reaches the Tier 2 final.</p>
+        </li>
+        <li>
+          <p class="text-sm font-semibold text-red">2026</p>
+          <p class="text-ink/80">
+            Jaxon Cover becomes the first Caymanian drafted to the NHL (Ottawa Senators, 32nd overall). Ryder Cali also
+            drafted (Florida Panthers, second round). CIIHF fields a 2026 16U team and continues ECHO travel.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="governance" class="scroll-mt-24">
+    <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+      <h2 class="text-4xl text-navy">Governance</h2>
+      <div class="mt-6 rounded border border-amber-300/60 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+        {board.message}
+      </div>
+      <ul class="mt-6 max-w-3xl list-disc space-y-2 pl-5 text-ink/80">
+        {board.publicFacts.map((fact) => <li>{fact}</li>)}
+      </ul>
+      <p class="mt-6 text-sm text-ink/60">
+        Registry contact on file: {board.registryContact.email} · {board.registryContact.phone}. World Skate directory
+        contacts are not published here as board officers until CIIHF confirms the current slate.
+      </p>
+    </div>
+  </section>
+
+  <section id="on-island" class="scroll-mt-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+      <h2 class="text-4xl text-navy">On-island activities</h2>
+      <p class="mt-4 max-w-2xl text-ink/80">
+        Programming runs at {site.location.venue}, {site.location.address}. Pathway spans Learn to Skate and Intro to
+        Hockey through Minor, then 10U / 13U / 16U, plus Advanced sessions and 2–3 camps per year. Adults play Tuesday
+        nights for the Cherry Cup and often drop in on Sundays.
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          ['Youth pathway', 'Learn to Skate → Intro → Minor → 10U / 13U / 16U'],
+          ["Men's league", 'Tuesday nights · King\'s Cherry Cup'],
+          ['Drop-in', 'Sunday open hockey, nearly year-round'],
+          ['Camps', 'Winter, spring, and summer hockey camps'],
+          ['Inter-school', 'Historic school tournaments (e.g. Prep, CIS, St. Ignatius)'],
+          ['Facility', 'Partner rink hours via kingssportscentre.com'],
+        ].map(([title, body]) => (
+          <div class="border border-sand bg-mist p-5">
+            <p class="font-display text-2xl text-navy">{title}</p>
+            <p class="mt-2 text-sm text-ink/75">{body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-6 text-sm">
+        <a class="font-semibold text-blue hover:text-red" href={site.contacts.rinkUrl} target="_blank" rel="noreferrer">
+          King's Sports Centre →
+        </a>
+        {' · '}
+        <a class="font-semibold text-blue hover:text-red" href="/season">2026–27 age groups →</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="off-island" class="scroll-mt-24">
+    <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+      <h2 class="text-4xl text-navy">Off-island tournaments</h2>
+      <p class="mt-4 max-w-2xl text-ink/80">
+        Travel teams historically span 8U through 14U (and now 16U). Exact 2026–27 entries will be posted when confirmed.
+      </p>
+      <div class="mt-8 grid gap-6 lg:grid-cols-3">
+        {tournaments.map((t) => (
+          <article class="flex flex-col border border-sand bg-white p-6 shadow-sm">
+            <p class="text-xs font-semibold tracking-wide text-red uppercase">{t.region}</p>
+            <h3 class="mt-2 font-display text-3xl text-navy">{t.name}</h3>
+            <p class="text-sm text-ink/60">{t.fullName}</p>
+            <p class="mt-3 text-sm text-ink/80">{t.summary}</p>
+            <ul class="mt-4 flex-1 list-disc space-y-2 pl-4 text-sm text-ink/75">
+              {t.highlights.map((h) => <li>{h}</li>)}
+            </ul>
+            <p class="mt-4 text-xs font-medium text-ink/50">{t.calendarNote}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

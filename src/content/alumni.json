@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Jaxon Cover",
+    "era": "Youth at King's · NHL Draft 2026",
+    "summary": "Learned the game on roller hockey at King's Sports Centre from about age 3 to 12. 2016 NARCh MVP in two age groups. First Caymanian drafted to the NHL — Ottawa Senators, 32nd overall in 2026.",
+    "featured": true,
+    "links": [
+      {
+        "label": "Ottawa Senators feature",
+        "href": "https://www.nhl.com/senators/news/how-jaxon-cover-s-dad-laid-the-foundation-for-an-unlikely-hockey-journey"
+      }
+    ]
+  },
+  {
+    "name": "Ryder Cali",
+    "era": "Youth at King's · NHL Draft 2026",
+    "summary": "Played roller hockey in Cayman alongside Cover. Selected by the Florida Panthers in the second round of the 2026 NHL Draft.",
+    "featured": true,
+    "links": []
+  },
+  {
+    "name": "Jaeden Cover",
+    "era": "Youth at King's · Canada pathway",
+    "summary": "Jaxon's brother; same youth program at King's before continuing development in Canada.",
+    "featured": false,
+    "links": []
+  }
+]
