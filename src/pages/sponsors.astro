@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import sponsors from '../content/sponsors.json';
+import { base } from '../lib/base';
 
 const helmetTier = sponsors.tiers.find((t) => t.id === 'helmet');
 const jerseyTier = sponsors.tiers.find((t) => t.id === 'jersey');
@@ -32,7 +33,7 @@ const jerseyTier = sponsors.tiers.find((t) => t.id === 'jersey');
             </div>
             <figure class="flex items-center justify-center overflow-hidden border border-sand bg-navy/95 p-4 shadow-sm">
               <img
-                src="/images/sponsors/tim-hortons-helmet.jpg"
+                src={`${base}images/sponsors/tim-hortons-helmet.jpg`}
                 alt="Red CCM hockey helmet with Tim Hortons maple leaf sticker"
                 class="max-h-64 w-auto max-w-full object-contain md:max-h-72"
                 width="874"

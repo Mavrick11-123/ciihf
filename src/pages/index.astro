@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import site from '../content/site.json';
 import sponsors from '../content/sponsors.json';
+import { base } from '../lib/base';
 
 const homeSponsors = sponsors.tiers.flatMap((tier) =>
   tier.sponsors.map((s) => ({ ...s, tier: tier.label }))
@@ -14,7 +15,7 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
 >
   <section class="relative min-h-[88vh] overflow-hidden bg-navy text-white">
     <img
-      src="/images/hero-banner.jpg"
+      src={`${base}images/hero-banner.jpg`}
       alt="Cayman Islands inline hockey team on the rink at King's Sports Centre"
       class="absolute inset-0 h-full w-full object-cover object-center"
       width="1024"
@@ -28,7 +29,7 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
       aria-hidden="true"
     ></div>
     <div class="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:px-6 md:pb-24">
-      <img src="/logo.png" alt="" class="mb-6 h-24 w-24 drop-shadow-lg md:h-28 md:w-28" width="112" height="112" />
+      <img src={`${base}logo.jpg`} alt="" class="mb-6 h-28 w-auto max-w-[12rem] object-contain drop-shadow-lg md:h-32" height="128" />
       <p class="text-sm font-semibold tracking-[0.25em] text-red uppercase">{site.tagline}</p>
       <h1 class="mt-3 max-w-4xl text-6xl leading-[0.9] md:text-8xl">
         Cayman Islands<br />Inline Hockey
@@ -36,19 +37,19 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
       <p class="mt-5 max-w-xl text-lg text-sand/90">{site.mission}</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
-          href="/season"
+          href={`${base}season`}
           class="rounded bg-red px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-red-hot"
         >
           {site.seasonLabel} season
         </a>
         <a
-          href="/about"
+          href={`${base}about`}
           class="rounded border border-white/30 px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-white/10"
         >
           About CIIHF
         </a>
         <a
-          href="/contact"
+          href={`${base}contact`}
           class="rounded border border-white/30 px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-white/10"
         >
           Contact
@@ -59,17 +60,17 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
 
   <section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
     <div class="grid gap-6 md:grid-cols-3">
-      <a href="/season" class="group block border-t-4 border-red bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <a href={`${base}season`} class="group block border-t-4 border-red bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
         <p class="font-display text-3xl text-navy">Join</p>
         <p class="mt-2 text-sm text-ink/75">Learn to Skate through 16U, men's Tuesday league, and Sunday drop-in at King's.</p>
         <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">See age groups →</span>
       </a>
-      <a href="/season" class="group block border-t-4 border-blue bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <a href={`${base}season`} class="group block border-t-4 border-blue bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
         <p class="font-display text-3xl text-navy">{site.seasonLabel}</p>
         <p class="mt-2 text-sm text-ink/75">Season structure is live; practice nights, fees, and registration details arrive from the federation.</p>
         <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">Season page →</span>
       </a>
-      <a href="/about#off-island" class="group block border-t-4 border-navy bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <a href={`${base}about#off-island`} class="group block border-t-4 border-navy bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
         <p class="font-display text-3xl text-navy">Travel</p>
         <p class="mt-2 text-sm text-ink/75">ECHO, TORHS, and NARCh — Cayman teams compete across North America.</p>
         <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">Tournaments →</span>
@@ -87,13 +88,13 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
           Ottawa Senators, 32nd overall in 2026. On island, Cayman's 12U also won ECHO Youth Finals Tier 2 in May 2025.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="/alumni" class="text-sm font-semibold text-blue hover:text-red">Past players →</a>
-          <a href="/about#off-island" class="text-sm font-semibold text-blue hover:text-red">ECHO & travel →</a>
+          <a href={`${base}alumni`} class="text-sm font-semibold text-blue hover:text-red">Past players →</a>
+          <a href={`${base}about#off-island`} class="text-sm font-semibold text-blue hover:text-red">ECHO & travel →</a>
         </div>
       </div>
       <figure class="relative min-h-72 overflow-hidden bg-navy">
         <img
-          src="/images/rink.jpg"
+          src={`${base}images/rink.jpg`}
           alt="Indoor rink at King's Sports Centre, looking toward the goal"
           class="absolute inset-0 h-full w-full object-cover object-center"
           width="870"
@@ -114,7 +115,7 @@ const homeSponsors = sponsors.tiers.flatMap((tier) =>
           <p class="font-display text-3xl text-navy">Sponsors</p>
           <p class="mt-1 text-sm text-ink/70">Helmet and jersey partners for the current season.</p>
         </div>
-        <a href="/sponsors#welcome" class="text-sm font-semibold text-blue hover:text-red">Become a sponsor →</a>
+        <a href={`${base}sponsors#welcome`} class="text-sm font-semibold text-blue hover:text-red">Become a sponsor →</a>
       </div>
       <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         {homeSponsors.map((s) => (

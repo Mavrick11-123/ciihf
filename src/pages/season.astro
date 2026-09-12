@@ -3,6 +3,7 @@ import Layout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import site from '../content/site.json';
 import ageGroups from '../content/age-groups.json';
+import { base } from '../lib/base';
 ---
 
 <Layout
@@ -60,7 +61,7 @@ import ageGroups from '../content/age-groups.json';
       </div>
       <p class="mt-8 text-sm">
         Questions about which group fits your player?
-        <a class="font-semibold text-blue hover:text-red" href="/contact"> Contact CIIHF →</a>
+        <a class="font-semibold text-blue hover:text-red" href={`${base}contact`}> Contact CIIHF →</a>
       </p>
     </div>
   </section>

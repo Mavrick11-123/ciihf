@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import site from '../content/site.json';
 import board from '../content/board.json';
 import tournaments from '../content/tournaments.json';
+import { base } from '../lib/base';
 ---
 
 <Layout
@@ -138,7 +139,7 @@ import tournaments from '../content/tournaments.json';
           King's Sports Centre →
         </a>
         {' · '}
-        <a class="font-semibold text-blue hover:text-red" href="/season">2026–27 age groups →</a>
+        <a class="font-semibold text-blue hover:text-red" href={`${base}season`}>2026–27 age groups →</a>
       </p>
     </div>
   </section>

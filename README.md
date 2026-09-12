@@ -35,4 +35,6 @@ Forms: replace Formspree `placeholder` IDs on Contact and Sponsors pages before 
 
 ## Deploy
 
-Build is fully static (`dist/`). Host on Cloudflare Pages or Netlify, then point `ciihf.org` DNS off the GoDaddy lander.
+GitHub Pages publishes the static `dist/` build from `main` via `.github/workflows/deploy.yml`.
+
+Live site: https://mavrick11-123.github.io/ciihf/

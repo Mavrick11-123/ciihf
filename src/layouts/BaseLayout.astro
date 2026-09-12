@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { base } from '../lib/base';
 import '../styles/global.css';
 
 interface Props {
@@ -19,7 +20,7 @@ const fullTitle = title.includes('CIIHF') || title.includes('Cayman Islands Inli
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/jpeg" href={`${base}logo.jpg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
