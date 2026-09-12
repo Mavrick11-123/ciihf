@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import site from '../content/site.json';
+import sponsors from '../content/sponsors.json';
+
+const homeSponsors = sponsors.tiers.flatMap((tier) =>
+  tier.sponsors.map((s) => ({ ...s, tier: tier.label }))
+);
+---
+
+<Layout
+  title="Cayman Islands Inline Hockey Federation"
+  description={site.mission}
+>
+  <section class="relative min-h-[88vh] overflow-hidden bg-navy text-white">
+    <img
+      src="/images/hero-banner.jpg"
+      alt="Cayman Islands inline hockey team on the rink at King's Sports Centre"
+      class="absolute inset-0 h-full w-full object-cover object-center"
+      width="1024"
+      height="425"
+    />
+    <div
+      class="absolute inset-0"
+      style="background:
+        linear-gradient(105deg, rgba(6,21,38,0.88) 0%, rgba(11,31,58,0.72) 48%, rgba(6,21,38,0.55) 100%),
+        linear-gradient(to top, rgba(6,21,38,0.85) 0%, transparent 45%);"
+      aria-hidden="true"
+    ></div>
+    <div class="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:px-6 md:pb-24">
+      <img src="/logo.png" alt="" class="mb-6 h-24 w-24 drop-shadow-lg md:h-28 md:w-28" width="112" height="112" />
+      <p class="text-sm font-semibold tracking-[0.25em] text-red uppercase">{site.tagline}</p>
+      <h1 class="mt-3 max-w-4xl text-6xl leading-[0.9] md:text-8xl">
+        Cayman Islands<br />Inline Hockey
+      </h1>
+      <p class="mt-5 max-w-xl text-lg text-sand/90">{site.mission}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/season"
+          class="rounded bg-red px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-red-hot"
+        >
+          {site.seasonLabel} season
+        </a>
+        <a
+          href="/about"
+          class="rounded border border-white/30 px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-white/10"
+        >
+          About CIIHF
+        </a>
+        <a
+          href="/contact"
+          class="rounded border border-white/30 px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-white/10"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+    <div class="grid gap-6 md:grid-cols-3">
+      <a href="/season" class="group block border-t-4 border-red bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+        <p class="font-display text-3xl text-navy">Join</p>
+        <p class="mt-2 text-sm text-ink/75">Learn to Skate through 16U, men's Tuesday league, and Sunday drop-in at King's.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">See age groups →</span>
+      </a>
+      <a href="/season" class="group block border-t-4 border-blue bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+        <p class="font-display text-3xl text-navy">{site.seasonLabel}</p>
+        <p class="mt-2 text-sm text-ink/75">Season structure is live; practice nights, fees, and registration details arrive from the federation.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">Season page →</span>
+      </a>
+      <a href="/about#off-island" class="group block border-t-4 border-navy bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+        <p class="font-display text-3xl text-navy">Travel</p>
+        <p class="mt-2 text-sm text-ink/75">ECHO, TORHS, and NARCh — Cayman teams compete across North America.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-blue group-hover:text-red">Tournaments →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:px-6 md:items-center">
+      <div>
+        <p class="text-sm font-semibold tracking-[0.2em] text-red uppercase">Featured</p>
+        <h2 class="mt-2 text-5xl text-navy">From King's floor to the NHL draft</h2>
+        <p class="mt-4 text-ink/80">
+          Jaxon Cover learned hockey on rollers at King's Sports Centre and became the first Caymanian drafted to the NHL —
+          Ottawa Senators, 32nd overall in 2026. On island, Cayman's 12U also won ECHO Youth Finals Tier 2 in May 2025.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/alumni" class="text-sm font-semibold text-blue hover:text-red">Past players →</a>
+          <a href="/about#off-island" class="text-sm font-semibold text-blue hover:text-red">ECHO & travel →</a>
+        </div>
+      </div>
+      <figure class="relative min-h-72 overflow-hidden bg-navy">
+        <img
+          src="/images/rink.jpg"
+          alt="Indoor rink at King's Sports Centre, looking toward the goal"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+          width="870"
+          height="1024"
+        />
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-6 text-white">
+          <p class="font-display text-3xl">King's Sports Centre</p>
+          <p class="mt-1 text-sm text-sand/85">Home ice · Crewe Road, Grand Cayman</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="border-y border-sand bg-mist">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="font-display text-3xl text-navy">Sponsors</p>
+          <p class="mt-1 text-sm text-ink/70">Helmet and jersey partners for the current season.</p>
+        </div>
+        <a href="/sponsors#welcome" class="text-sm font-semibold text-blue hover:text-red">Become a sponsor →</a>
+      </div>
+      <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {homeSponsors.map((s) => (
+          <div class="flex h-24 flex-col items-center justify-center border border-sand bg-white px-3 text-center">
+            <p class="font-display text-2xl text-navy">{s.name}</p>
+            <p class="mt-1 text-[10px] font-semibold tracking-wide text-red uppercase">{s.tier}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+    <p class="font-display text-3xl text-navy">Follow the game</p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <a class="font-semibold text-blue hover:text-red" href={site.social.instagram} target="_blank" rel="noreferrer">
+        Instagram @cayman.hockey
+      </a>
+      <a class="font-semibold text-blue hover:text-red" href={site.social.facebook} target="_blank" rel="noreferrer">
+        Facebook · Cayman Inline Hockey
+      </a>
+    </div>
+  </section>
+</Layout>

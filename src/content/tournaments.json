@@ -1,0 +1,39 @@
+[
+  {
+    "id": "echo",
+    "name": "ECHO",
+    "fullName": "East Coast Hockey Organization",
+    "region": "United States (Southeast / East Coast)",
+    "summary": "Primary recent travel destination for Cayman youth teams. Instagram highlights include ECHO 2026.",
+    "highlights": [
+      "May 2025: Cayman Islands 12U won ECHO Youth Finals 12U Tier 2 (4–3 vs Snellville Mayhem).",
+      "May 2025: Cayman 10U reached the Tier 2 final."
+    ],
+    "calendarNote": "2026–27 travel calendar to be confirmed."
+  },
+  {
+    "id": "torhs",
+    "name": "TORHS",
+    "fullName": "Tournament of Roller Hockey Series",
+    "region": "Wesley Chapel, Florida (Nationals)",
+    "summary": "National-level roller hockey series. Cayman teams have appeared in US coverage as visiting international squads.",
+    "highlights": [
+      "Instagram travel highlights: TORHS 2021, 2022, and 2023.",
+      "Nationals hosted at AdventHealth Center Ice in Wesley Chapel."
+    ],
+    "calendarNote": "2026–27 travel calendar to be confirmed."
+  },
+  {
+    "id": "narch",
+    "name": "NARCh",
+    "fullName": "North American Roller Hockey Championships",
+    "region": "Regionals across US/Canada; Finals historically Estero, Mississauga, Irvine",
+    "summary": "Long-running destination for Cayman travel teams. A NARCh clinic was later hosted at King's Sports Centre.",
+    "highlights": [
+      "2014: Cayman Atom and Mite teams earned silver at NARCh Finals; Josh Small among scoring leaders.",
+      "Historical travel ages included 8U, 10U, 12U, and 14U.",
+      "Instagram still features a NARCh ’19 highlight."
+    ],
+    "calendarNote": "2026–27 travel calendar to be confirmed."
+  }
+]

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0b1f3a;
+  --color-navy-deep: #061526;
+  --color-blue: #1a4b8c;
+  --color-blue-bright: #2a6bc4;
+  --color-red: #c8102e;
+  --color-red-hot: #e0183a;
+  --color-sand: #e8eef5;
+  --color-mist: #f4f7fb;
+  --color-flag-green: #009639;
+  --color-ink: #142033;
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body: "DM Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-mist);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-red) 35%, white);
+  color: var(--color-navy);
+}

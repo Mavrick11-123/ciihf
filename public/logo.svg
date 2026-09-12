@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Cayman Islands Inline Hockey Federation">
+  <defs>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a4b8c"/>
+      <stop offset="100%" stop-color="#0b1f3a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#ice)" stroke="#f4f7fb" stroke-width="4"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#c8102e" stroke-width="3"/>
+  <g fill="#f4f7fb">
+    <polygon points="100,28 103,36 112,36 105,41 107,50 100,45 93,50 95,41 88,36 97,36"/>
+    <polygon points="52,58 55,66 64,66 57,71 59,80 52,75 45,80 47,71 40,66 49,66"/>
+    <polygon points="148,58 151,66 160,66 153,71 155,80 148,75 141,80 143,71 136,66 145,66"/>
+  </g>
+  <g transform="translate(58,62)" fill="#f4f7fb">
+    <path d="M42 8c6 0 11 5 11 11v6c0 4-2 7-5 9l8 14c2 3 1 7-2 9l-6 4c-3 2-7 1-9-2l-7-12-4 2v10l12 18c2 3 1 7-2 9l-6 4c-3 2-7 1-9-2L7 70c-2-3-1-7 2-9l8-5V38L5 28c-3-2-4-6-2-9l4-6c2-3 6-4 9-2l12 8h14z"/>
+    <ellipse cx="78" cy="78" rx="14" ry="6" fill="#c8102e" transform="rotate(-18 78 78)"/>
+    <ellipse cx="98" cy="86" rx="14" ry="6" fill="#c8102e" transform="rotate(-18 98 86)"/>
+    <rect x="68" y="74" width="40" height="4" rx="2" fill="#f4f7fb" transform="rotate(-18 88 76)"/>
+  </g>
+  <text x="100" y="178" text-anchor="middle" fill="#f4f7fb" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2">CIIHF</text>
+</svg>

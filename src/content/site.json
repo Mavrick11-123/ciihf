@@ -1,0 +1,25 @@
+{
+  "name": "Cayman Islands Inline Hockey Federation",
+  "shortName": "CIIHF",
+  "tagline": "Let's Go Cayman",
+  "mission": "The national federation for inline hockey in the Cayman Islands — developing players on island and representing Cayman off island.",
+  "domain": "https://ciihf.org",
+  "social": {
+    "instagram": "https://www.instagram.com/cayman.hockey/",
+    "facebook": "https://www.facebook.com/caymaninlinehockey"
+  },
+  "location": {
+    "venue": "King's Sports Centre",
+    "address": "861 Crewe Road, George Town, Grand Cayman",
+    "mapQuery": "King's Sports Centre, 861 Crewe Road, George Town, Grand Cayman",
+    "note": "CIIHF partners with King's Sports Centre for on-island programming. CIIHF does not own the rink."
+  },
+  "contacts": {
+    "federationEmail": "ciinlinehockey@gmail.com",
+    "federationPhone": "+1 (345) 946-5125",
+    "rinkPhone": "+1 (345) 946-5464",
+    "rinkEmail": "kings@candw.ky",
+    "rinkUrl": "https://www.kingssportscentre.com/"
+  },
+  "seasonLabel": "2026–2027"
+}

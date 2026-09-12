@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import site from '../content/site.json';
+
+const placeholders = [
+  'Team photo — rights-cleared asset needed',
+  'Rink action — federation upload',
+  'Travel tournament — no Instagram scrape',
+  'Cherry Cup night — placeholder',
+  'Youth practice — consent required for minors',
+  'Camp week — placeholder',
+];
+---
+
+<Layout
+  title="Photos"
+  description="Photo gallery for the Cayman Islands Inline Hockey Federation. Federation-supplied assets only."
+>
+  <PageHero
+    eyebrow="Photos"
+    title="On the floor"
+    lead="Gallery slots are ready for rights-cleared images from CIIHF. We do not scrape social media. No identifiable photos of minors without permission."
+  />
+
+  <section class="mx-auto max-w-6xl px-4 py-14 md:px-6">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {placeholders.map((label, i) => (
+        <figure class="relative aspect-[4/3] overflow-hidden bg-navy">
+          <div
+            class="absolute inset-0 opacity-80"
+            style={`background:
+              linear-gradient(${120 + i * 20}deg, #0b1f3a, #1a4b8c 45%, #c8102e55);
+            `}
+          ></div>
+          <figcaption class="relative flex h-full items-end p-4 text-sm text-white/90">{label}</figcaption>
+        </figure>
+      ))}
+    </div>
+    <p class="mt-8 text-sm text-ink/70">
+      Drop approved images into <code class="rounded bg-sand px-1">public/images/</code> and list them in a future
+      <code class="rounded bg-sand px-1">photos.json</code>. Meanwhile follow
+      <a class="font-semibold text-blue hover:text-red" href={site.social.instagram} target="_blank" rel="noreferrer">
+        @cayman.hockey
+      </a>
+      for live updates.
+    </p>
+  </section>
+</Layout>

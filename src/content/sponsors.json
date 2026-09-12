@@ -1,0 +1,48 @@
+{
+  "currentNote": "Thank you to our 2026–27 partners.",
+  "tiers": [
+    {
+      "id": "helmet",
+      "label": "Helmet sponsor",
+      "sponsors": [
+        {
+          "name": "Tim Hortons",
+          "logo": null,
+          "photo": "/images/sponsors/tim-hortons-helmet.jpg",
+          "photoAlt": "Red CCM hockey helmet with Tim Hortons maple leaf sticker"
+        }
+      ]
+    },
+    {
+      "id": "jersey",
+      "label": "Jersey sponsors",
+      "sponsors": [
+        { "name": "Deloitte", "logo": null },
+        { "name": "Ogier", "logo": null },
+        { "name": "Kirk Freeport", "logo": null }
+      ]
+    }
+  ],
+  "historical": [
+    "WestTel",
+    "Mepco",
+    "Burger King",
+    "Cayman Hot Sauce",
+    "Ecay Traders",
+    "PwC",
+    "Ernst & Young",
+    "Hudson",
+    "Vampt",
+    "Appleby",
+    "Conyers",
+    "Walkers",
+    "Maples",
+    "RBC",
+    "XN Financial",
+    "UBS",
+    "LOM",
+    "Five Continents",
+    "CSA"
+  ],
+  "historicalNote": "Names below appeared as team or league sponsors in public coverage roughly 2009–2014. They are historical context only — not a claim of current sponsorship."
+}
