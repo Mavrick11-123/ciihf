@@ -1,22 +1,24 @@
 ---
 import site from '../content/site.json';
+import { base } from '../lib/base';
 
 const links = [
-  { href: '/about', label: 'About' },
-  { href: '/season', label: '2026–27' },
-  { href: '/sponsors', label: 'Sponsors' },
-  { href: '/photos', label: 'Photos' },
-  { href: '/alumni', label: 'Past Players' },
-  { href: '/contact', label: 'Contact' },
+  { href: `${base}about`, label: 'About' },
+  { href: `${base}season`, label: '2026–27' },
+  { href: `${base}sponsors`, label: 'Sponsors' },
+  { href: `${base}photos`, label: 'Photos' },
+  { href: `${base}alumni`, label: 'Past Players' },
+  { href: `${base}contact`, label: 'Contact' },
 ];
 
-const pathname = Astro.url.pathname;
+const normalize = (path: string) => path.replace(/\/$/, '') || '/';
+const pathname = normalize(Astro.url.pathname);
 ---
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 text-white backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-    <a href="/" class="flex items-center gap-3 no-underline">
-      <img src="/logo.png" alt="CIIHF" class="h-11 w-11" width="44" height="44" />
+    <a href={base} class="flex items-center gap-3 no-underline">
+      <img src={`${base}logo.jpg`} alt="CIIHF" class="h-11 w-auto max-w-[4.5rem] object-contain" height="44" />
       <span class="leading-tight">
         <span class="font-display block text-2xl tracking-wide text-white">{site.shortName}</span>
         <span class="hidden text-xs text-sand/80 sm:block">Inline Hockey Federation</span>
@@ -29,7 +31,7 @@ const pathname = Astro.url.pathname;
           href={link.href}
           class:list={[
             'rounded px-3 py-2 text-sm font-medium transition hover:bg-white/10',
-            pathname === link.href || pathname.startsWith(link.href + '/')
+            pathname === normalize(link.href) || pathname.startsWith(normalize(link.href) + '/')
               ? 'bg-white/15 text-white'
               : 'text-sand/90',
           ]}
